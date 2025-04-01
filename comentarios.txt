@@ -1,16 +1,17 @@
 Etapa 1:
 
-Inicialmente, com ambos tempos de produção e consumo são iguais, assim que um número é produzido, ele rapidamente é consumido, 
-fazendo com que o fluxo de produção/consumo tenda a ser uniforme.
+Inicialmente, com ambos tempos de produção e consumo são iguais, assim que um número é produzido, ele rapidamente é consumido, fazendo com que o fluxo de produção/consumo tenda a ser uniforme.
 
-Quando o tempo de produção é menor, ele  acaba produzindo "demais", e enchendo o Array. Como o tempo de 
-consumo é maior, quando ele tenta consumir, logo em seguida já é produzido e inserido outro número, fazendo com que o fluxo de produção/consumo
-seja desordenado, causando uma experiencia menos "fluida", onde o programa fica muito tempo travado esperando um consumidor, embora ainda funcione.
+Quando o tempo de produção é menor, ele  acaba produzindo "demais", e enchendo o Array. Como o tempo de consumo é maior, quando ele tenta consumir, logo em seguida já é produzido e inserido outro número, fazendo com que o fluxo de produção/consumo seja desordenado, causando uma experiencia menos "fluida", onde o programa fica muito tempo travado esperando um consumidor, embora ainda funcione.
 
 Já quando o tempo de consumo é menor, o Array fica, em boa parte do tempo, vazio, já que, no momento que um produtor gera um número, ele rapidamente é consumido. 
 
 
 Etapa 2:
+
+Testamos com um tempo de produção maior (ex: 700ms), e o resultado foi um timeout de consumidor, fazendo com que fosse bloqueado a execução de consumo, porém ele continuou produzindo, até encher o Array e encerrar a execução.
+
+Já quando colocamos um tempo menor, foi produzido e consumindo "simultaneamente", até chegar ao timeout mencionado, funcionando como esperado.
 
 
 
